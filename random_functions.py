@@ -181,11 +181,11 @@ class api():
 		if  not dataset:
 			return []
 		else:
-			# try:
-			# 	dataset = re.sub(" ", "", dataset[0])
-			# 	dataset = re.split(",", dataset)
-			# except:
-			# 	pass
+			try:
+				dataset = re.sub(" ", "", dataset[0])
+				dataset = re.split(",", dataset)
+			except:
+				pass
 			return random.choice(dataset)
 
 	###API for random fullName ###
@@ -517,7 +517,7 @@ class api():
 		if len(m) == 1:
 			m = '0' + m
 		if format == "12 Hour":
-			period = self.random_randomlist(["AM", "PM"])
+			period = random.choice(["AM", "PM"])
 		else:
 			period = ""
 		return h + ":" + m + " " + period
