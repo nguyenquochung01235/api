@@ -203,6 +203,8 @@ class api():
 		max = 100
 		if args:
 			min, max = self.wrap(args)
+			if min <= 0:
+				min = 1
 
 		return random.randint(min, max)
 
