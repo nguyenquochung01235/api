@@ -508,7 +508,7 @@ class api():
 			"24 Hour"
 		"""
 		if args:
-			format = args[0]
+			format = random.choice(args)
 		else:
 			format = "12 Hour"
 
