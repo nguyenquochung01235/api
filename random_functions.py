@@ -181,11 +181,11 @@ class api():
 		if  not dataset:
 			return []
 		else:
-			try:
-				dataset = re.sub(" ", "", dataset[0])
-				dataset = re.split(",", dataset)
-			except:
-				pass
+			# try:
+			# 	dataset = re.sub(" ", "", dataset[0])
+			# 	dataset = re.split(",", dataset)
+			# except:
+			# 	pass
 			return random.choice(dataset)
 
 	###API for random fullName ###
