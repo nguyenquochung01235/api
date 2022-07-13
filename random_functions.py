@@ -523,6 +523,12 @@ class api():
 		return h + ":" + m + " " + period
 
 
+	def random_text(self, args = None):
+		if args[0] != "":
+			return args[0]
+		else:
+			return "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+
 	###API for random id ###
 	def random_id(self):
 		return self.random_number(args=[10000,9999999999])
