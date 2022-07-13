@@ -536,3 +536,13 @@ class api():
 	###API for random number row ###
 	def random_numberrow(self):
 		return self.random_randomlist(["{numberrow}"])
+
+	def random_uuid(self):
+		template = "########-####-####-####-############"
+		result = ""
+		for char in template:
+			if char == "#":
+				result += random.choice(string.digits + "abcdef")
+			else:
+				result += "-"
+		return result
