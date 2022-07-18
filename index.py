@@ -261,6 +261,8 @@ def render_data():
 		return export_sql_file(result,table_name)
 	elif format_file == "CSV":
 		return export_json_file(result)
+	elif format_file == "EXCEL":
+		return export_json_file(result)
 	elif format_file == "XML":
 		return export_json_file(result)
 
